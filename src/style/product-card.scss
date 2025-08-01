@@ -1,0 +1,203 @@
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+
+  @include onLargeDesktop {
+    gap: 15px;
+  }
+
+  @include onSmallDesktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include onSmallTablet {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 15px;
+  }
+
+  @include onMobile {
+    column-gap: 15px;
+  }
+}
+
+.product-card {
+  padding: 30px 15px;
+  border-radius: 30px;
+  background-color: #F9F8F8;
+
+  .badge {
+    padding: 5px 12px;
+    background-color: $text-color;
+    color: $white-color;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    width: max-content;
+    margin-bottom: 5px;
+  }
+
+  .photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .info {
+    padding-top: 5px;
+    border-top: solid 1px #DEDDDD;
+    margin-bottom: 20px;
+
+    .price {
+      .full {
+        font-size: 15px;
+        color: #B8B8B8;
+        text-decoration: line-through;
+        margin-right: 5px;
+      }
+
+      .discount {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+
+    .rating {
+      position: relative;
+
+      span {
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+
+        &.default {
+          color: #B8B8B8;
+        }
+
+        &.active {
+          position: absolute;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+          color: #FFA858;
+        }
+      }
+    }
+  }
+
+  .buy {
+    display: block;
+    background-color: $text-color;
+    color: $white-color;
+    font-weight: 700;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px 2px;
+    border-radius: 8px;
+    border: solid 1px $text-color;
+    transition: all 0.2s linear;
+
+    &:hover {
+      background-color: transparent;
+      color: $text-color;
+    }
+
+    &.active {
+      background-color: transparent;
+      color: $text-color;
+
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
+  }
+
+  @include onLargeTablet {
+    padding: 20px 10px;
+    border-radius: 20px;
+
+    .badge {
+      font-size: 13px;
+      border-radius: 4px;
+    }
+
+    .title {
+      font-size: 16px;
+    }
+
+    .info {
+      .price {
+        .full {
+          font-size: 13px;
+        }
+
+        .discount {
+          font-size: 15px;
+        }
+      }
+
+      .rating {
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .buy {
+      font-size: 16px;
+      padding: 11px 2px;
+      border-radius: 4px;
+    }
+  }
+
+  @include onMobile {
+    padding: 10px 5px;
+    border-radius: 8px;
+
+    .badge {
+      padding: 3px 9px;
+      font-size: 9px;
+      border-radius: 3px;
+    }
+
+    .title {
+      font-size: 14px;
+    }
+
+    .info {
+      margin-bottom: 10px;
+
+      .price {
+        .full {
+          font-size: 10px;
+          margin-right: 3px;
+        }
+
+        .discount {
+          font-size: 13px;
+        }
+      }
+
+      .rating {
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .buy {
+      font-size: 12px;
+      padding: 5px 2px;
+      border-radius: 3px;
+    }
+  }
+}

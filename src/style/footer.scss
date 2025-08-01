@@ -1,0 +1,123 @@
+footer {
+  &.vertical-paddings {
+    padding-bottom: 0;
+  }
+
+  .logo {
+    height: 55px;
+    margin: 0 auto 15px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 105%;
+
+    &.description {
+      margin-bottom: 30px;
+    }
+
+    &.copyright {
+      margin: 15px 0;
+    }
+  }
+
+  h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    gap: 50px;
+    padding-bottom: 70px;
+    border-bottom: solid 1px $text-color;
+
+    li {
+      font-size: 18px;
+      color: #525C60;
+    }
+  }
+
+  @include onSmallDesktop {
+    .logo {
+      height: 40px;
+    }
+
+    p {
+      font-size: 16px;
+
+      &.description {
+        margin-bottom: 20px;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    ul {
+      gap: 40px;
+      padding-bottom: 50px;
+
+      li {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @include onLargeTablet {
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+
+      &.description {
+        margin-bottom: 15px;
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    ul {
+      gap: 30px;
+      padding-bottom: 40px;
+
+      li {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @include onSmallTablet {
+    .logo {
+      height: 30px;
+    }
+
+    p {
+      font-size: 13px;
+
+      &.copyright {
+        margin: 10px 0;
+      }
+    }
+
+    h3 {
+      margin-bottom: 5px;
+    }
+
+    ul {
+      flex-direction: column;
+      gap: 4px;
+      padding-bottom: 25px;
+
+      li {
+        font-size: 13px;
+      }
+    }
+  }
+}

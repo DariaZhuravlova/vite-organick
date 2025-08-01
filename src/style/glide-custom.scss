@@ -1,0 +1,36 @@
+.glide {
+  &__bullets {
+    bottom: -2.5em;
+
+    @include onSmallTablet {
+      bottom: -2em;
+    }
+  }
+
+  &__bullet {
+    width: 15px;
+    height: 15px;
+    background-color: $text-color;
+    opacity: 0.5;
+
+    &--active {
+      opacity: 1;
+    }
+
+    &:focus, &:hover {
+      background-color: $text-color;
+      opacity: 0.8;
+      border: none;
+    }
+
+    @include onSmallDesktop {
+      width: 11px;
+      height: 11px;
+    }
+
+    @include onSmallTablet {
+      width: 9px;
+      height: 9px;
+    }
+  }
+}

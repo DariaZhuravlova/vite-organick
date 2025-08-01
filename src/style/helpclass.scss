@@ -1,0 +1,213 @@
+.df {
+  display: flex;
+}
+.fc {
+  flex-direction: column;
+}
+.fr {
+  flex-direction: row;
+}
+.justify-a {
+  justify-content: space-around;
+}
+.justify-b {
+  justify-content: space-between;
+}
+.justify-c {
+  justify-content: center;
+}
+.align-c {
+  align-items: center;
+}
+.align-s {
+  align-items: flex-start;
+}
+.align-e {
+  align-items: flex-end;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 160px;
+
+  @include onLargeDesktop {
+    padding: 0 100px;
+  }
+
+  @include onSmallDesktop {
+    padding: 0 50px;
+  }
+
+  @include onLargeTablet {
+    padding: 0 40px;
+  }
+
+  @include onSmallTablet {
+    padding: 0 30px;
+  }
+
+  @include onMobile {
+    padding: 0 15px;
+  }
+}
+
+.yellowtail-text {
+  font-family: "Yellowtail", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.green-text {
+  color: $accent-green-color;
+}
+
+.call-to-action-link {
+  width: max-content;
+  padding: 20px;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.2s linear;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 20px;
+    margin-left: 15px;
+  }
+
+  i {
+    background-color: $white-color;
+    color: #335B6B;
+    border-radius: 50%;
+    margin-left: 15px;
+  }
+
+  @include onLargeDesktop {
+    font-size: 17px;
+
+    img {
+      width: 17px;
+      margin-left: 10px;
+    }
+
+    i {
+      margin-left: 10px;
+    }
+  }
+
+  @include onSmallDesktop {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+
+    img {
+      width: 16px;
+    }
+  }
+
+  @include onLargeTablet {
+    padding: 10px 7px;
+    font-size: 12px;
+    border-radius: 8px;
+
+    img {
+      width: 12px;
+    }
+  }
+
+  @include onSmallTablet {
+    font-size: 10px;
+
+    img {
+      width: 10px;
+      margin-left: 5px;
+    }
+
+    i {
+      margin-left: 5px;
+    }
+  }
+
+  @include onMobile {
+    padding: 5px;
+    font-size: 10px;
+    border-radius: 4px;
+  }
+}
+
+.sec-subtitle {
+  font-size: 36px;
+  margin-bottom: 10px;
+
+  @include onLargeDesktop {
+    font-size: 32px;
+  }
+
+  @include onSmallDesktop {
+    font-size: 28px;
+  }
+
+  @include onLargeTablet {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  @include onSmallTablet {
+    font-size: 18px;
+  }
+
+  @include onMobile {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+}
+
+.sec-title {
+  font-size: 50px;
+  line-height: 104%;
+
+  @include onLargeDesktop {
+    font-size: 44px;
+  }
+
+  @include onSmallDesktop {
+    font-size: 38px;
+  }
+
+  @include onLargeTablet {
+    font-size: 32px;
+  }
+
+  @include onSmallTablet {
+    font-size: 24px;
+  }
+
+  @include onMobile {
+    font-size: 20px;
+  }
+}
+
+.vertical-paddings {
+  padding: 150px 0;
+
+  @include onLargeDesktop {
+    padding: 75px 0;
+  }
+
+  @include onSmallDesktop {
+    padding: 55px 0;
+  }
+
+  @include onLargeTablet {
+    padding: 35px 0;
+  }
+
+  @include onSmallTablet {
+    padding: 20px 0;
+  }
+}
